@@ -1,3 +1,6 @@
 This is first file
 Adding 2nd line
+<<<<<<< HEAD
 Branch Hari:
+=======
+>>>>>>> parent of 8155c66 (commit)
