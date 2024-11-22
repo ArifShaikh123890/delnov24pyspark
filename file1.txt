@@ -1,15 +1,5 @@
 This is first file
 Adding 2nd line
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 Branch Hari:
-=======
->>>>>>> parent of 8155c66 (commit)
-=======
 Add some data dfadsfad
-dfadfa
->>>>>>> parent of ac19848 (branch commit)
-=======
 Branch Hari:
->>>>>>> parent of d76b941 (branch 1)
