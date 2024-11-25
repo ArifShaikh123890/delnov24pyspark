@@ -1,0 +1,32 @@
+[
+    {
+        "order_id": 1,
+        "customer_id": 101,
+        "product": "Laptop",
+        "price": 1200.50
+    },
+    {
+        "order_id": 2,
+        "customer_id": 102,
+        "product": "Smartphone",
+        "price": 800.00
+    },
+    {
+        "order_id": 3,
+        "customer_id": 103,
+        "product": "Tablet",
+        "price": 300.75
+    },
+    {
+        "order_id": 4,
+        "customer_id": 101,
+        "product": "Wireless Mouse",
+        "price": 25.00
+    },
+    {
+        "order_id": 5,
+        "customer_id": 104,
+        "product": "Monitor",
+        "price": 200.00
+    }
+]

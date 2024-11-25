@@ -1,0 +1,22 @@
+[
+    {
+        "customer_id": 101,
+        "name": "Alice Johnson",
+        "location": "New York"
+    },
+    {
+        "customer_id": 102,
+        "name": "Bob Smith",
+        "location": "Los Angeles"
+    },
+    {
+        "customer_id": 103,
+        "name": "Charlie Brown",
+        "location": "Chicago"
+    },
+    {
+        "customer_id": 104,
+        "name": "Diana Prince",
+        "location": "San Francisco"
+    }
+]
