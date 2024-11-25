@@ -1,3 +1,0 @@
-This is my first file
-Today i m learning git
-Adding some date to test append
