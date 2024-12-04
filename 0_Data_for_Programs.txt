@@ -1,0 +1,216 @@
+--> where:
+    arrayData = [
+        (("Saif", "", "Shaikh"), ["English", "Science", "Maths"], "HYD", "M"),
+        (("Ram", "Sachin", ""), ["Spark", "English", "Maths"], "BLR", "F"),
+        (("Aniket", "", "Mishra"), ["Civics", "History"], "HYD", "F"),
+        (("Mitali", "Sahil", "Kashiv"), ["Civics", "History"], "BLR", "M"),
+        (("Zaid", "Riyaz", "Shaikh"), ["Civics", "History"], "BLR", "M"),
+        (("Sufiyan", "Alim", "Shaikh"), ["Hindi", "History"], "HYD", "M")]
+
+--> orderBy, sortBy, groupBy:
+    orderingData = [("Saif", "Sales", "HYD", 90000, 34, 10000),
+                  ("Ram", "Sales", "HYD", 86000, 56, 20000),
+                  ("Aniket", "Sales", "MUM", 81000, 30, 23000),
+                  ("Saima", "Finance", "MUM", 90000, 24, 23000),
+                  ("Sufiyan", "Finance", "MUM", 99000, 40, 24000),
+                  ("Alim", "Finance", "HYD", 83000, 36, 19000),
+                  ("Mitali", "Finance", "HYD", 79000, 53, 15000),
+                  ("Neha", "Marketing", "MUM", 80000, 25, 18000),
+                  ("Kajal", "Marketing", "HYD", 91000, 50, 21000)]
+
+--> withColumn:
+    data = [('Saif', '', 'Shaikh', '1991-04-01', 'M', 3000),
+            ('Ram', 'Sachin', '', '2000-05-19', 'M', 4000),
+            ('Aniket', '', 'Mishra', '1978-09-05', 'M', 4000),
+            ('Mitali', 'Sahil', 'Kashiv', '1967-12-01', 'F', 4000),
+            ('Nahid', 'Alim', 'Shaikh', '1980-02-17', 'F', -1)]
+
+--> withColumnRenamed:
+    dataDF = [(('Saif', '', 'Shaikh'), '1991-04-01', 'M', 3000),
+              (('Ram', 'Sachin', ''), '2000-05-19', 'M', 4000),
+              (('Aniket', '', 'Mishra'), '1978-09-05', 'M', 4000),
+              (('Mitali', 'Sahil', 'Kashiv'), '1967-12-01', 'F', 4000),
+              (('Nahid', 'Alim', 'Shaikh'), '1980-02-17', 'F', -1)]
+
+--> union - unionAll:
+    simpleData1 = [("Saif", "Sales", "MUM", 90000, 34, 10000),
+                  ("Aniket", "Sales", "MUM", 86000, 56, 20000),
+                  ("Ram", "Sales", "PUN", 81000, 30, 23000),
+                  ("Mitali", "Finance", "PUN", 90000, 24, 23000)]
+
+    simpleData2 = [("Saif", "Sales", "MUM", 90000, 34, 10000),
+                   ("Mitali", "Finance", "PUN", 90000, 24, 23000),
+                   ("Sufiyan", "Finance", "MUM", 79000, 53, 15000),
+                   ("Alim", "Marketing", "PUN", 80000, 25, 18000),
+                   ("Amit", "Marketing", "MUM", 91000, 50, 21000)]
+
+--> drop - dropDuplicates:
+    data = [("Saif", "Sales", 3000),
+        ("Mitali", "Sales", 4600),
+        ("Manas", "Sales", 4100),
+        ("Kajal", "Finance", 3000),
+        ("Neha", "Sales", 3000),
+        ("Ram", "Finance", 3300),
+        ("Aniket", "Finance", 3900),
+        ("Shravan", "Marketing", 3000),
+        ("Pramod", "Marketing", 2000),
+        ("Vivek", "Sales", 4100)]
+
+--> case - when - others:
+    data = [("Saif","","Shaikh","36636","M",60000),
+            ("Ram","Shirali","","40288","M",70000),
+            ("Aniket","","Mishra","42114","",400000),
+            ("Mitali","Sahil","Kashiv","39192","F",500000),
+            ("Nahid","Alim","Shaikh","","F",0)]
+
+--> String Functions:
+    data = [("Saif" ,"M" ,"Shaikh" ,"2018" ,"M" ,3000),
+               ("Ram" ,"S" ,"Shirali" ,"2010" ,"M" ,4000),
+               ("Mitali" ,"S" ,"Kashiv" ,"2010" ,"M" ,4000),
+               ("Anup" ,"B" ,"Garje" ,"2005" ,"F" ,4000),
+               ("Sagar" ,"S" ,"Shinde" ,"2010" ,"" ,-1)]
+
+--> Aggregate & Window Functions:
+    data = [("Saif", "Sales", 3000),
+               ("Ram", "Sales", 4600),
+               ("Aniket", "Sales", 4100),
+               ("Mitali", "Finance", 3000),
+               ("Saif", "Sales", 3000),
+               ("Sandeep", "Finance", 3300),
+               ("John", "Finance", 3900),
+               ("Jeff", "Marketing", 3000),
+               ("Sagar", "Marketing", 2000),
+               ("Swaroop", "Sales", 4100)]
+
+    explodeData = [('Saif', ['Java', 'Scala'], {'hair': 'black', 'eye': 'brown'}),
+        ('Mitali', ['Spark', 'Java', None], {'hair': 'brown', 'eye': None}),
+        ('Ram', ['CSharp', ''], {'hair': 'red', 'eye': ''}),
+        ('Wilma', None, None),
+        ('Jatin', ['1', '2'], {})]
+
+--> joins:
+    emp = [(1, "Saif", -1, "2018", "10", "M", 3000),
+           (2, "Ram", 1, "2010", "20", "M", 4000),
+           (3, "Aniket", 1, "2010", "10", "M", 1000),
+           (4, "Mitali", 2, "2005", "10", "F", 2000),
+           (5, "Nahid", 2, "2010", "40", "", -1),
+           (6, "Sufiyan", 2, "2010", "50", "", -1)]
+
+    dept = [("Finance", 10),
+            ("Marketing", 20),
+            ("Sales", 30),
+            ("IT", 40)]
+
+--> Socket Streaming Json Data with Schema:
+{"device_id": 1, "device_name": "sensor-mac-aAt85bOBM", "humidity": 80, "lat": 81, "long": 57, "scale": "Celius", "temp": 30, "timestamp": 1447975123.509765, "zipcode": 95353}
+{"device_id": 2, "device_name": "sensor-mac-able9bI4h6kR", "humidity": 36, "lat": 13, "long": 56, "scale": "Celius", "temp": 14, "timestamp": 1447975124.005187, "zipcode": 96484}
+
+--> JSON Data for Kafka:
+{"device_id": 1, "device_name": "sensor-mac-aAt85bOBM", "humidity": 80, "lat": 81, "long": 57, "scale": "Celius", "temp": 30, "timestamp": 1447975123.509765, "zipcode": 95353}
+{"device_id": 2, "device_name": "sensor-mac-able9bI4h6kR", "humidity": 36, "lat": 13, "long": 56, "scale": "Celius", "temp": 14, "timestamp": 1447975124.005187, "zipcode": 96484}
+
+Delimited Data:
+{"device_id": 1, "device_name": "sensor-mac-aAt85bOBM", "humidity": 80, "lat": 81, "long": 57, "scale": "Celius", "temp": 30, "timestamp": 1447975123.509765, "zipcode": 95353} | {"device_id": 2, "device_name": "sensor-mac-able9bI4h6kR", "humidity": 36, "lat": 13, "long": 56, "scale": "Celius", "temp": 14, "timestamp": 1447975124.005187, "zipcode": 96484}
+
+--> Devices Schema:
+schema = StructType([
+StructField("device_id",StringType(), True),
+StructField("device_name",StringType(), True),
+StructField("humidity",StringType(), True),
+StructField("lat",StringType(), True),
+StructField("long",StringType(), True),
+StructField("scale",StringType(), True),
+StructField("temp",StringType(), True),
+StructField("timestamp",StringType(), True),
+StructField("zipcode",StringType(), True)
+])
+
+--> Invoices Schema:
+    schema = StructType([
+        StructField("InvoiceNumber", StringType()),
+        StructField("CreatedTime", LongType()),
+        StructField("StoreID", StringType()),
+        StructField("PosID", StringType()),
+        StructField("CashierID", StringType()),
+        StructField("CustomerType", StringType()),
+        StructField("CustomerCardNo", StringType()),
+        StructField("TotalAmount", DoubleType()),
+        StructField("NumberOfItems", IntegerType()),
+        StructField("PaymentMethod", StringType()),
+        StructField("CGST", DoubleType()),
+        StructField("SGST", DoubleType()),
+        StructField("CESS", DoubleType()),
+        StructField("DeliveryType", StringType()),
+        StructField("DeliveryAddress", StructType([
+            StructField("AddressLine", StringType()),
+            StructField("City", StringType()),
+            StructField("State", StringType()),
+            StructField("PinCode", StringType()),
+            StructField("ContactNumber", StringType())
+        ])),
+        StructField("InvoiceLineItems", ArrayType(StructType([
+            StructField("ItemCode", StringType()),
+            StructField("ItemDescription", StringType()),
+            StructField("ItemPrice", DoubleType()),
+            StructField("ItemQty", IntegerType()),
+            StructField("TotalValue", DoubleType())
+        ]))),
+    ])
+
+
+    stock_schema = StructType([
+        StructField("CreatedTime", StringType()),
+        StructField("Type", StringType()),
+        StructField("Amount", IntegerType()),
+        StructField("BrokerCode", StringType())
+    ])
+
+
+    schema = StructType([
+        StructField("CreatedTime", StringType()),
+        StructField("Reading", DoubleType())
+    ])
+	
+
+RandomUser Schema:
+dfSchema = StructType([
+        StructField("results", ArrayType(
+            StructType([
+                StructField("user", StructType([
+                    StructField("gender", StringType()),
+                    StructField("name", StructType([
+                        StructField("first", StringType()),
+                        StructField("last", StringType()),
+                        StructField("title", StringType())
+                    ])),
+                    StructField("location", StructType([
+                        StructField("street", StringType()),
+                        StructField("city", StringType()),
+                        StructField("state", StringType()),
+                        StructField("zip", StringType())
+                    ])),
+                    StructField("email", StringType()),
+                    StructField("username", StringType()),
+                    StructField("password", StringType()),
+                    StructField("salt", StringType()),
+                    StructField("md5", StringType()),
+                    StructField("sha1", StringType()),
+                    StructField("sha256", StringType()),
+                    StructField("registered", StringType()),
+                    StructField("dob", StringType()),
+                    StructField("phone", StringType()),
+                    StructField("cell", StringType()),
+                    StructField("BSN", StringType()),
+                    StructField("picture", StructType([
+                        StructField("large", StringType()),
+                        StructField("medium", StringType()),
+                        StructField("thumbnail", StringType())
+                    ]))
+                ]))
+            ])
+        )),
+        StructField("nationality", StringType()),
+        StructField("seed", StringType()),
+        StructField("version", StringType()),
+    ])
+
